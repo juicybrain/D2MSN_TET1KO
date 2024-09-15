@@ -30,6 +30,8 @@ java -jar juicer_tools_1.22.01.jar hiccups  -k KR -r 50000 -f 0.1 --ignore-spars
 # calculate the loop score for each Hi-C replicate
 findTADsAndLoops.pl score  -loop ../D1_loop.bedpe  -o male.loop   -d <Hi-C replicates directory> -cpu 4 -res 25000  -window 50000 -raw -normTotal 1e8 
 
+
+
 # convert ".hic" file to ".cool" file using Hicexplorer
 hicConvertFormat   --matrices ${spl}  --outFileName ${spl}\.mcool --inputFormat hic --outputFormat cool
 
